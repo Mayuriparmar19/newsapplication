@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: AppColors.black,
-        appBar: MyAppBar(title: 'Tech',nt: 'News',),
+        appBar: const MyAppBar(title: 'Tech',nt: 'News',),
         body: Column(
           children: [
             const Search(),
