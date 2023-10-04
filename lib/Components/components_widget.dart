@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Utils/colors.dart';
@@ -41,6 +42,15 @@ class BottomSheetImage extends StatelessWidget {
                   topLeft: Radius.circular(20), topRight: Radius.circular(20)),
               image: DecorationImage(
                   image: NetworkImage(imageurl), fit: BoxFit.cover)),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: IconButton(
+              onPressed: (){
+                Navigator.pop(context);
+              },
+               icon:  Icon(CupertinoIcons.back,color:AppColors.white,size: 30,),
+            ),
+          ),
         ),
         Positioned(
           bottom: 10,
