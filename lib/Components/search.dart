@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newsapplication/BackEnd/functions.dart';
-
-import '../BackEnd/fun2.dart';
 import '../Utils/colors.dart';
 
 class Search extends StatefulWidget {
@@ -49,7 +47,6 @@ class _SearchState extends State<Search> {
           onTap: () {
             FocusScope.of(context).unfocus();
             fetchNews();
-            fetchNews1();
           },
           child: Container(
             width: 45,
