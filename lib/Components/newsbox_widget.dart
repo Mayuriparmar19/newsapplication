@@ -24,6 +24,7 @@ class NewsBox extends StatelessWidget {
       InkWell(
           onTap: () {
             showMyBottomSheet(context, title, description, imageUrl, url);
+            print('object');
           },
           child: Container(
               padding: const EdgeInsets.all(20),
