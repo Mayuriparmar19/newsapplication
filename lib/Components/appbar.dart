@@ -20,12 +20,12 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: AppColors.black,
       elevation: 0,
       title: SizedBox(
-          height: 40,
+          height: 42,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              boldText(text: title, size: 20, color: AppColors.primary),
-              modifiedText(text: nt, size: 20, color: AppColors.lightWhite)
+              BoldText(text: title, size: 20, color: AppColors.primary),
+              ModifiedText(text: nt, size: 20, color: AppColors.lightWhite)
             ],
           )),
       centerTitle: true,

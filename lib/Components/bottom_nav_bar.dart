@@ -53,10 +53,10 @@ class MyBottomSheetLayout extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          BottomSheetImage(imageurl: imageurl, title: title),
+          BottomSheetImage(imageUrl: imageurl, title: title),
           Container(
               padding: const EdgeInsets.all(10),
-              child: modifiedText(
+              child: ModifiedText(
                   text: description, size: 16, color: Colors.white)),
           Container(
             padding: const EdgeInsets.all(10),

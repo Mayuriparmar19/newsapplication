@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: AppColors.black,
-        appBar: const MyAppBar(title: 'Tech',nt: 'News',),
+        appBar: const MyAppBar(title: 'Trending',nt: 'News',),
         body: Column(
           children: [
             const Search(),
@@ -43,8 +43,8 @@ class _HomeState extends State<Home> {
                             itemBuilder: (context, index) {
                               return NewsBox(
                                 url: snapshot.data![index]['url'],
-                                imageurl:
-                                snapshot.data![index]['urlToImage'] ?? Constant.imageurl,
+                                imageUrl:
+                                snapshot.data![index]['urlToImage'] ?? Constant.imageUrl,
                                 title: snapshot.data![index]['title'],
                                 time: snapshot.data![index]['publishedAt'],
                                 description: snapshot.data![index]

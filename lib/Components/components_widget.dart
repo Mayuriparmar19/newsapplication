@@ -10,7 +10,7 @@ class DividerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 20, right: 20),
+      padding: const EdgeInsets.only(left: 20, right: 20),
       child: Divider(
         color: AppColors.lightWhite,
       ),
@@ -19,9 +19,9 @@ class DividerWidget extends StatelessWidget {
 }
 
 class BottomSheetImage extends StatelessWidget {
-  final String imageurl, title;
+  final String imageUrl, title;
   const BottomSheetImage(
-      {Key? key, required this.imageurl, required this.title})
+      {Key? key, required this.imageUrl, required this.title})
       : super(key: key);
 
   @override
@@ -41,7 +41,7 @@ class BottomSheetImage extends StatelessWidget {
               borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20), topRight: Radius.circular(20)),
               image: DecorationImage(
-                  image: NetworkImage(imageurl), fit: BoxFit.cover)),
+                  image: NetworkImage(imageUrl), fit: BoxFit.cover)),
           child: Align(
             alignment: Alignment.topLeft,
             child: IconButton(
@@ -57,7 +57,7 @@ class BottomSheetImage extends StatelessWidget {
           child: Container(
               padding: const EdgeInsets.all(10),
               width: 300,
-              child: boldText(text: title, size: 18, color: Colors.white)),
+              child: BoldText(text: title, size: 18, color: Colors.white)),
         )
       ]),
     );

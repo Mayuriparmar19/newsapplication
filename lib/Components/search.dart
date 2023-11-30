@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newsapplication/BackEnd/functions.dart';
@@ -6,7 +7,7 @@ import '../Utils/colors.dart';
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
   static TextEditingController searchController =
-  TextEditingController(text: '');
+      TextEditingController(text: '');
 
   @override
   _SearchState createState() => _SearchState();
@@ -27,20 +28,20 @@ class _SearchState extends State<Search> {
                 borderRadius: BorderRadius.circular(50)),
             child: Center(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const SizedBox(width: 10),
-                    Expanded(
-                        child: TextField(
-                          controller: Search.searchController,
-                          decoration: InputDecoration(
-                              hintText: 'Search',
-                              hintStyle: GoogleFonts.lato(),
-                              border: InputBorder.none),
-                        ))
-                  ],
-                )),
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(width: 10),
+                Expanded(
+                    child: TextField(
+                  controller: Search.searchController,
+                  decoration: InputDecoration(
+                      hintText: 'Search',
+                      hintStyle: GoogleFonts.lato(),
+                      border: InputBorder.none),
+                ))
+              ],
+            )),
           ),
         ),
         InkWell(
@@ -59,7 +60,24 @@ class _SearchState extends State<Search> {
             ),
           ),
         ),
-        const SizedBox(width: 10)
+        const SizedBox(width: 5),
+        InkWell(
+          onTap: () {
+            if (kDebugMode) {
+              print('back button clicked');
+            }
+          },
+          child: Container(
+            width: 45,
+            height: 45,
+            decoration: BoxDecoration(
+                color: AppColors.darkGrey, shape: BoxShape.circle),
+            child: Icon(
+              Icons.highlight_remove_outlined,
+              color: AppColors.white,
+            ),
+          ),
+        ),
       ],
     );
   }
